@@ -32,8 +32,8 @@ public class CustomerRepositoryTest {
     
     @Test
     public void whenFindByIdThenReturnCustomer() {
-        Customer expected = new Customer("Jenny Willson", "jenny@customers.com", "+52623232");
-        entityManager.persistAndFlush(expected);
+        Customer expected = new Customer(1L, "Jenny Willson", "jenny@customers.com", "+52623232");
+        entityManager.merge(expected);
 
         Customer actual = repository.findById(1L).get();
         assertEquals(expected, actual);

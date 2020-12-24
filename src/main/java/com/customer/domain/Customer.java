@@ -37,12 +37,6 @@ public class Customer {
         this.phone = phone;
     }
     
-    public Customer(String fullName, String email, String phone) {
-        this.fullName = fullName;
-        this.email = email;
-        this.phone = phone;
-    }
-
     public Long getId() {
         return id;
     }
